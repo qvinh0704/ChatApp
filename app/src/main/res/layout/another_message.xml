@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:id="@+id/relative_Layout_Message"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/speech_bubble_another"
+        android:layout_height="wrap_content">
+        <TextView
+            android:minHeight="50dp"
+            android:minWidth="50dp"
+            android:gravity="center_vertical"
+            android:id="@+id/textViewMessage_Another"
+            android:layout_width="wrap_content"
+            android:maxWidth="320dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            />
+    </RelativeLayout>
+</RelativeLayout>

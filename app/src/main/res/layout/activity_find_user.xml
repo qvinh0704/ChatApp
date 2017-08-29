@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoDragView="@+id/relativeDrag"
+    sothree:umanoPanelHeight="0dp"
+    sothree:umanoShadowHeight="4dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_find_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purpleBackground"
+        android:orientation="vertical"
+        tools:context="com.example.quangvinh.chatapprx.Presenter.Presenter.FindNearbyUser.FindUserActivity">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_FindUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purpleBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    android:id="@+id/editTextStatus_FindUser"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/relative_imageButtonCheckin_FindUser"
+                    android:hint="where are you now"
+                    android:maxLines="1"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/white"
+                    android:textSize="15sp" />
+                <RelativeLayout
+                    android:id="@+id/relative_imageButtonCheckin_FindUser"
+                    android:layout_width="35dp"
+                    android:layout_toLeftOf="@+id/relative_imageButton_RetrieveUser"
+                    android:layout_height="35dp">
+                    <ImageButton
+                        android:id="@+id/imageButtonCheckin_FindUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/custom_checkin_button" />
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/relative_imageButton_RetrieveUser"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toLeftOf="@+id/relative_ChatHistory">
+
+                    <ImageButton
+                        android:id="@+id/imageButton_RetrieveUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_button_retrieveuser"
+                        android:scaleType="centerCrop" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/relative_ChatHistory"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageButton
+                        android:id="@+id/imageButtonChatHistory_FindUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_button_chathistory" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/textView_Notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/circle_notification"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <fragment
+                android:id="@+id/fragmentMap"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBar_FindUser"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/custom_progressbar"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeDrag"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/imageViewAvatar_FindUser"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/noimage" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/imageViewAvatar_FindUser">
+
+            <TextView
+                android:id="@+id/textViewName_FindUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:text="Tên" />
+
+            <TextView
+                android:id="@+id/textViewSex_FindUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewName_FindUser"
+                android:layout_marginTop="10dp"
+                android:text="Sex" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewSex_FindUser"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textViewStatus_FindUser"
+                />
+
+            <Button
+                android:id="@+id/buttonChat_FindUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_button_message" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Halo</string>
+    <string name="create_new_account"><u>Create new account</u></string>
+    <string name="reset_password"><u>Reset password</u></string>
+    <string name="send_verification"><u>Send me verification</u></string>
+    <string name="email_empty">Email is empty</string>
+    <string name="password_empty">Password is empty</string>
+    <string name="name_empty">Full name is empty</string>
+    <string name="email_invalid">Email is invalid</string>
+    <string name="password_invalid">Password should be 9-15 characters</string>
+    <string name="name_invalid">Full name should be 3-30 characters</string>
+</resources>

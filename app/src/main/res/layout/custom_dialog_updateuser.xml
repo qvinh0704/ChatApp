@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/purpleBackground"
+    android:padding="10dp"
+    android:layout_height="150dp">
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textViewTitle_Dialog_Update"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:text="Verify User"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_below="@+id/textViewTitle_Dialog_Update"
+        android:id="@+id/editTextCurrPass_Dialog_Update"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:hint="Current password"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:textColor="@color/yellow"
+        android:textColorHint="@color/white"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/buttonConfirm_Dialog_Update"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Confirm"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/state_button_register"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
